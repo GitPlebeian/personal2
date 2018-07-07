@@ -1,0 +1,61 @@
+Levels of Power
+
+1. Grand Master
+2. Admin
+3. User
+
+Finacial Managment Website
+
+Display of all money totalled for accounts (This is your bank account ballance).
+
+Different accounts like spending and savings.
+Money display for each account and catagory of spending
+
+Input money earned
+Inputed money earned can give percentages to different accounts.
+
+accounts can have a max value and then no more money will enter that account for example.
+emergency fund account will have a max of 1000 dollars for a rainy day.
+
+You can add different catagroies of spending such as food, games etc.
+These catagories are for budgetting purposes and the money displayed has no value.
+theses catagories will have a max value per week month or year.
+the max value is how much you can spend per the amount of time on the catagory.
+When inputing a expence into the system you will enter a catagory that it is and it will take money out of the catagory and out of the account that catagory is linked to. 
+Every catagory is linked to an account to take money out of.
+
+All accounts and catagories can have negative values.
+If the catagories have negative values then the next month will only add back the max value of the catagory. so if your food catagory has negative 20 dollars and a max of 50 dollars then next month the food catagory will only have 30 dollars to discurage spending.
+
+You will have a graph of total money earned over time and a total graph of money spent.
+
+There will be a pie chart for money earned and money spend. The pie chart will be allocated by the catagory of money erned and moneyspent. 
+
+
+I will need:
+
+Logout button
+Super balance (all Accounts combined)
+Accounts:
+	Money ammount and if applicable out of total max
+	A way to edit/delete accounts
+		add or change max value (will not change current value)
+		delete button
+			move funds to different accounts, cannot delete account if account does not equal 0
+		change name
+		Manuall Override
+			Change ammount (will change super balance)
+	Add Catagory Button (include all features realated to editing a catagory)
+Catagories:
+	Money ammount out of total max
+	A way to edit/delete catagories
+		change max value (will not change current value)
+		delete button
+			are you sure
+		change name
+		change associated account
+		Manuall Override
+			Bring current amount to max value (Doesnt't change associated account amount)
+			Bring current amount to any value including negatives (Doesnt't change associated account amount)
+	Add Catagory Button (include all features realated to editing a catagory)
+

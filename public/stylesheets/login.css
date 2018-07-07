@@ -1,0 +1,179 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #D7C9AA;
+  font-size: 22px;
+  overflow: hidden;
+}
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+.loginLogo{
+	float: left;
+	margin: 0;
+	width: 30%;
+	height: 100vh;
+	position: relative;
+}
+.loginLogo p{
+	color: #202128;
+	letter-spacing: 20px;
+	padding-left: 10px;
+	margin: 0;
+	font-size: 70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	transition: opacity 0.5s;
+	opacity: 0;
+}
+.loginLogo p.active{
+	opacity: 100;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+	text-align: center;
+	margin-top: 0px;
+}
+.inputs{
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.5s;
+	width: 300px;
+}
+.inputs.active{
+	opacity: 100;
+}
+input{
+	font-family: 'Roboto', sans-serif;
+	color: inherit;
+	box-sizing: border-box;
+	width: 100%;
+	border: none;
+	background-color: inherit;
+	font-size: 20px;
+	padding: 7px;
+	background-color: #202128;
+	margin-bottom: 8px;
+}
+input:focus{
+	outline: none;
+}
+h3{
+	color: #ff3535;
+}
+button{
+	font-family: 'Roboto', sans-serif;
+	color: inherit;
+	box-sizing: border-box;
+	width: 100%;
+	border: none;
+	background-color: inherit;
+	font-size: 20px;
+	padding: 7px;
+	background-color: #202128;
+}
+button:hover{
+	outline: none;
+	/*background-color: #1c1d24;*/
+}
+button:focus{
+	outline: none;
+}
+form{
+	height: 100vh;
+	width: 70%;
+	background-color: #262730;
+	float: right;
+	position: relative;
+}
+@media (min-width: 993px){
+
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+	form{
+		height: 92vh;
+		width: 100%;
+		background-color: #262730;
+		position: relative;
+	}
+	.loginLogo{
+		margin: 0;
+		width: 100%;
+		height: 8vh;
+	}
+	.loginLogo p{
+		font-size: 70px;
+		letter-spacing: 10px;
+		padding-left: 5px;
+		font-size: 30px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media (max-width: 768px ) and (min-width: 576px) {
+	form{
+		height: 92vh;
+		width: 100%;
+		background-color: #262730;
+		position: relative;
+	}
+	.loginLogo{
+		margin: 0;
+		width: 100%;
+		height: 8vh;
+	}
+	.loginLogo p{
+		font-size: 70px;
+		letter-spacing: 10px;
+		padding-left: 5px;
+		font-size: 30px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+/*	input{
+		font-size: 18px;
+	}
+	button{
+		font-size: 18px;
+	}*/
+}
+@media (max-width: 576px) {
+	form{
+		height: 100vh;
+		width: 100%;
+		background-color: #262730;
+		position: relative;
+	}
+	.inputs{
+		width: 277px;
+
+	}
+	.loginLogo{
+		display: none;
+	}
+/*	input{
+		font-size: 18px;
+	}
+	button{
+		font-size: 18px;
+	}*/
+}

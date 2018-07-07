@@ -1,0 +1,166 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #616374;
+  font-size: 18px;
+  color: white;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+p{
+  margin: 0;
+}
+.navBar {
+  background-color: #434553; /* Color of the Navbar */
+  width: 100%;
+  font-size: 20px;
+  padding: 15px 15px; /* Padding in desktop mode */
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  /*box-shadow: 0 0 4px #666;*/
+}
+.navBarLogoText{
+  display: none;
+}
+.navBar a, .navBar p{
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin: 0 10px; /* margin desktop mode */
+  position: relative;
+}
+.navBar a:first-child{
+  margin-left: 0;
+}
+.navBar a::before{
+  content: "";
+  border-top: 1px solid #fff; /* Hover effect color */
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  transition: 0.20s;
+}
+.navBar a:hover::before{
+  width: 100%;
+}
+.navBar a.right, p.right{
+	float: right;
+	margin-right: 0;
+	margin-left: 10px;
+}
+.sideBar{
+	background-color: #34353f;
+	width: 320px;
+	height: calc(100vh - 54px);
+	position: fixed;
+	padding:4px;
+	left: 0;
+	bottom: 0;
+	overflow: auto;
+}
+.sideBarAccount{
+	background-color: #424452;
+	border-radius: 3px;
+	padding: 4px;
+	margin-bottom: 4px;
+}
+.sideBarAccount:last-child{
+	margin-bottom: 0;
+}
+
+.content{
+  margin-top: 52px;
+  padding: 0 10%;
+}
+.contentBox{
+  background-color: white;
+  padding: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+@media (max-width: 625px) { /* Phone to desktop break point */
+  .content{
+    margin-top: calc(2.5% + 50px);
+    padding: 0 2.5%;
+  }
+  .navBar{
+    padding: 0;
+  }
+  .navBar .navBarLinks{
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    transition: 0.25s; /* Speed of toggle for links */
+  }
+  .navBar a{
+    display: block;
+    line-height: 45px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding-left: 2.5%;
+  }
+  .navBar a::before{
+    border: none;
+  }
+  .navBar .navBarLogoText{
+    display: block;
+    line-height: 50px;
+    float: left;
+    font-size: 27px;
+    width: calc(100% - 45px);
+    padding-left: 2.5%;
+    box-sizing:border-box;
+    line-height: 50px;
+  }
+  .navBarToggle{
+    height: 50px;
+    width: 45px;
+    float: left;
+    padding: 15.5px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .navBarTogglePart{
+    background-color: white; /* NavBar toggle color */
+    width: 25px;
+    height: 1px;
+    position: relative;
+    transition: 0.25s; /* Speed of the navbar toggle */
+  }
+  .navBarTogglePart:nth-child(1){
+    margin-bottom: 8px;
+  }
+  .navBarTogglePart:nth-child(2){
+    margin-bottom: 8px;
+  }
+
+  .active .navBarTogglePart:nth-child(1){
+    -webkit-transform: translate(0,9px) rotate(-135deg);
+    transform: translate(0,9px) rotate(-135deg);
+  }
+  .active .navBarTogglePart:nth-child(2){
+    -webkit-transform: translate(35px,0);
+    transform: translate(35px,0);
+  }
+  .active .navBarTogglePart:nth-child(3){
+    -webkit-transform: translate(0,-9px) rotate(135deg);
+    transform: translate(0,-9px) rotate(135deg);
+  }
+}
