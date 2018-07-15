@@ -1,9 +1,3 @@
-var navBarName = $('.navBar p')
-
-$.get("userInfo", function(data, status) {
-  navBarName.html('Hi, ' + data.username)
-});
-
 
 function navBar() {
   navBarToggle = $('.navBarToggle')

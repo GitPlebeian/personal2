@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/login.css">
     <title>Jax Tubbs - Login</title>
   </head>
@@ -19,15 +19,9 @@
           <br>
           <input maxlength="18" type="password" id="password" name="password" placeholder="Password" autocomplete="off" spellcheck="false">
           <input maxlength="18" type="password" id="password2" name="password2" placeholder="Repeat Password" autocomplete="false" spellcheck="false">
-          <button>Submit</button>
+          <button style="color: <%= color %>"><%= message %></button>
           <br>
-          <h3><%= thing %></h3>
           </div>
       </form>
 <script type="text/javascript" src="/scripts/jquery.min.js"></script>
-<script type="text/javascript">
-  console.log(thing)
-</script>
-<script type="text/javascript" src="/scripts/signup.js"></script>
-</body>
-</html>
+<script type="text/javascript" src="/scripts/signup.js"></script>"

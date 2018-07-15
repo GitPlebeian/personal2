@@ -51,7 +51,8 @@ app.post('/login', passport.authenticate('local', {
 )
 app.get('/signup', function(req, res) {
 	res.render('signup', {
-		thing: ''
+		message: 'Signup',
+		color: '#fff'
 	})
 })
 app.post('/signup', function(req, res) {
@@ -60,28 +61,68 @@ app.post('/signup', function(req, res) {
 	var tmpPassword2 = striptags(req.body.password2)
 
 	if (tmpUsername != req.body.username) {
-		res.send('You have html tags in your username')
+		res.render('signup', {
+			message: 'No HTML Tags',
+			color: '#ff3535'
+		})
 	} else if (tmpPassword != req.body.password) {
-		res.send('You have html tags in your password2')
+		res.render('signup', {
+			message: 'No HTML Tags',
+			color: '#ff3535'
+		})
 	} else if (tmpPassword2 != req.body.password2) {
-		res.send('You have html tags in your password2')
+		res.render('signup', {
+			message: 'No HTML Tags',
+			color: '#ff3535'
+		})
 	} else if (req.body.username.length < 5) {
-		res.send('Username < 5')
+		res.render('signup', {
+			message: 'Username < 5',
+			color: '#ff3535'
+		})
+	} else if (req.body.username.length > 14) {
+		res.render('signup', {
+			message: 'Username > 14',
+			color: '#ff3535'
+		})
 	} else if (req.body.password != req.body.password2) {
-		res.send('passwords do not match')
+		res.render('signup', {
+			message: 'Passwords Do Not Match',
+			color: '#ff3535'
+		})
+	} else if (req.body.password > 18) {
+		res.render('signup', {
+			message: 'Password > 18',
+			color: '#ff3535'
+		})
 	} else if (req.body.username == req.body.password) {
-		res.send('username and password are equal, no no no')
+		res.render('signup', {
+			message: 'Username == Password',
+			color: '#ff3535'
+		})
 	} else if (req.body.password.length < 6) {
-		res.send('password < 6')
+		res.render('signup', {
+			message: 'Password < 6',
+			color: '#ff3535'
+		})
 	} else if (req.body.username.includes(' ')) {
-		res.send('username cant contain spaces')
-	} else {
+		res.render('signup', {
+			message: 'Username Has A Space',
+			color: '#ff3535'
+		})
+	} else if (req.body.password.includes(' ')) {
+		res.render('signup', {
+			message: 'Password Has A Space',
+			color: '#ff3535'
+		})
+	}else {
 		User.register(new User({
 			username: req.body.username
 		}), req.body.password, function(err, user) {
 			if (err) {
 				return res.render('signup', {
-					thing: 'Username Taken'
+					message: 'Username Taken',
+					color: '#ff3535'
 				})
 			}
 			passport.authenticate('local')(req, res, function() {
